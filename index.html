@@ -1,0 +1,195 @@
+<style>
+
+@keyframes move-the-unicorn {
+    0% {
+        right:180px;
+    } 
+    100%{
+        right: -80px;
+    }
+}
+
+@keyframes drift-the-cloud-top {
+    0% {
+        left: 0;
+    }
+    50%{
+        left: 90px;
+    }
+    100% {
+        left: 0;
+    }
+}
+
+@keyframes drift-the-cloud-bottom {
+    0% {
+        right: 10px;
+    }
+    50%{
+        right: 90px;
+    }
+    100%{
+        right: 10px;
+    }
+}
+
+@keyframes rock-the-text {
+    0%{
+    -ms-transform: rotate(7deg); /* IE 9 */
+    -webkit-transform: rotate(7deg); /* Chrome, Safari, Opera */
+    transform: rotate(7deg);
+
+    }
+    50%{
+    -ms-transform: rotate(-7deg); /* IE 9 */
+    -webkit-transform: rotate(-7deg); /* Chrome, Safari, Opera */
+    transform: rotate(-7deg);
+
+    }
+    100%{
+        -ms-transform: rotate(7deg); /* IE 9 */
+    -webkit-transform: rotate(7deg); /* Chrome, Safari, Opera */
+    transform: rotate(7deg);
+
+    }
+}
+
+.loader {
+    position: relative;
+    overflow: hidden;
+    height: 140px;
+    background: #a0e0f9;
+    border-radius: 100px;
+    border: solid 8px #ce1836;
+}
+
+.unicorn{
+    position: absolute;
+    top:40px;
+    animation: move-the-unicorn 2s linear infinite; 
+
+}
+
+.rainbow {
+    position: absolute;
+    left: -65px;
+    top:60px;
+
+
+}
+img {
+    display: inline-block;
+    height: 50px;
+
+}
+
+.stripe {
+    height: 4px;
+    width: 280px;
+    display: block;
+}
+
+.red {
+    background: red;
+}
+.orange {
+    background: orange;
+}
+.yellow {
+    background: yellow;
+}
+.green {
+    background: green;
+}
+.ltblue {
+    background: aqua;
+}
+.indigo {
+    background: blue;
+}
+.purple {
+    background: purple;
+}
+
+.upper {
+    top: 30px;
+    animation: drift-the-cloud-top 20s infinite;
+}
+
+.lower {
+    bottom: 20px;
+    animation: drift-the-cloud-bottom 20s infinite;
+}
+.cloud {
+    background: white;
+    position: absolute;
+    width: 40px;
+    height: 12px;
+}
+.edge{
+    background: white;
+    height: 8px;
+    width: 28px;
+    position: absolute;
+    
+}
+.edge-1 {
+    top: -5px;
+    left: 2px;
+}
+
+.edge-2{
+    bottom:-5px;
+    right: 5px;
+}
+.loader-text {
+    animation: rock-the-text 8s infinite;
+    text-align: center;
+    color:white; 
+    font-family: 'courier'; 
+    background: #ce1836; 
+    display: block;
+}
+/*  .show-loader {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity .5s ease-in-out;
+    -moz-transition: opacity .5s ease-in-out;
+    -webkit-transition: opacity .5s ease-in-out;
+}
+.hide-loader {
+    visibility: hidden;   
+    opacity: 0;
+    transition: opacity .5s ease-in-out;
+    -moz-transition: opacity .5s ease-in-out;
+    -webkit-transition: opacity .5s ease-in-out;
+}*/
+
+</style>
+
+<div class="loader-wrap" style="padding: 40px; width: 160px; margin: 100px auto; display: block;">
+   <div class="loader"> 
+    <div class="lower cloud">
+        <div class="edge edge-1"></div>
+        <div class="edge edge-2"></div>
+    </div>
+    <div class="rainbow">
+        <div class="stripe red"></div>
+        <div class="stripe orange"></div>
+        <div class="stripe yellow"></div>
+        <div class="stripe green"></div>
+        <div class="stripe ltblue"></div>
+        <div class="stripe indigo"></div>
+        <div class="stripe purple"></div>
+    </div>
+    <div class="upper cloud">
+        <div class="edge edge-1"></div>
+        <div class="edge edge-2"></div>
+    </div>
+    <div class="sparkles"></div>
+    <img class="unicorn" src="unicorn.svg"/></div>
+    <span class="loader-text">
+        LOADING...
+    </span>
+</div>
+</div>
